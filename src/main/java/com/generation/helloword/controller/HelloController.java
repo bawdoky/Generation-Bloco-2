@@ -10,14 +10,14 @@ public class HelloController {
 	
 	@GetMapping
 	public String hello() {
-		return " Hello Familia 41! ";
+		return " Olá mundo, \nMentalidade: Persistênci e Habilidade: Atenção aos detalhes! ";
 	}
 	
 	
 	
 	@GetMapping ("/2")
 	public String hello2() {
-		return " Olá Familia 41! ";
+		return " Olá mundo,\nObjetivo de aprenizagem: Spring! ";
 	}
 
 }
