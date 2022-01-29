@@ -36,7 +36,8 @@ public class TemaController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Tema> getById(@PathVariable Long id) {
 		return temaRepository.findById(id)
-				.map(resposta -> ResponseEntity.ok(resposta))
+				//.map(resposta -> ResponseEntity.ok(resposta))
+				.map(respostaTema -> ResponseEntity.ok(respostaTema))
 				.orElse(ResponseEntity.notFound().build());	
 	}
 	
@@ -54,9 +55,12 @@ public class TemaController {
 	public ResponseEntity <Tema> putTema(@Valid @RequestBody Tema tema){
 		//return ResponseEntity.status(HttpStatus.OK).body(postagemRepository.save(tema));
 		return temaRepository.findById(tema.getId())
+				/*
 				.map(resposta -> {
 					return ResponseEntity.ok().body(temaRepository.save(tema));
 				})
+				*/
+				.map(resposta -> ResponseEntity.ok().body(temaRepository.save(tema)))
 				.orElse(ResponseEntity.notFound().build());
 	}
 	

@@ -9,7 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
+//import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -18,16 +19,20 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Tema {
 	
 		@Id
-		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		@GeneratedValue(strategy = GenerationType.IDENTITY)  // auto increment do id
 		private Long id;
 		
+		/*
 		@NotBlank(message = "O atributo Descrito é obrigatorio e não pode conter")
 		private String descricao;
+		*/
 		
-	    @OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
+		@NotNull(message = "O atributo Descrição é obrigatório")
+		private String descricao;
+		
+		@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
 		@JsonIgnoreProperties("tema")
 		private List<Postagem> postagem;
-		
 
 		public Long getId() {
 			return id;
@@ -52,5 +57,7 @@ public class Tema {
 		public void setPostagem(List<Postagem> postagem) {
 			this.postagem = postagem;
 		}
+
+		
 		
 }

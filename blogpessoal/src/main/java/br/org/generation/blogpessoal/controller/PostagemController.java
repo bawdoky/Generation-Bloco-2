@@ -38,7 +38,8 @@ public class PostagemController {
 	@GetMapping("/{id}")
 	public ResponseEntity <Postagem> getById(@PathVariable Long id){
 		return postagemRepository.findById(id)
-				.map(resposta -> ResponseEntity.ok(resposta))
+				//.map(resposta -> ResponseEntity.ok(resposta))
+				.map(respostaPostagem -> ResponseEntity.ok(respostaPostagem))
 				.orElse(ResponseEntity.notFound().build());
 		
 		/* UMA OPÇÃO ALTERNATIVA PARA A FUNÇÃO ACIMA POREM COM IF E ELSE
@@ -65,14 +66,15 @@ public class PostagemController {
 	public ResponseEntity <Postagem> putPostagem(@Valid @RequestBody Postagem postagem){
 		//return ResponseEntity.status(HttpStatus.OK).body(postagemRepository.save(postagem));
 		return postagemRepository.findById(postagem.getId())
-				.map(resposta -> ResponseEntity.ok(postagemRepository.save(postagem)))
+				//.map(resposta -> ResponseEntity.ok(postagemRepository.save(postagem)))
+				.map(resposta -> ResponseEntity.ok().body(postagemRepository.save(postagem)))
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity <?> deletePostagem(@PathVariable Long id){
 		return postagemRepository.findById(id)
-				.map(resposta ->{
+				.map(resposta -> {
 					postagemRepository.deleteById(id);
 					return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 				})

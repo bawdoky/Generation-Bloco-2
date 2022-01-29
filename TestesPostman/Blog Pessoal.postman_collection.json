@@ -1,0 +1,587 @@
+{
+	"info": {
+		"_postman_id": "9f077e8e-594d-46c3-9833-cffbae2411f8",
+		"name": "Blog Pessoal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Postagem",
+			"item": [
+				{
+					"name": "Get By All Postagens",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QWRtaW5pc3RyYWRvckBlbWFpbC5jb206YWRtaW4xMjM=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/postagens/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QWRtaW5pc3RyYWRvckBlbWFpbC5jb206YWRtaW4xMjM=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/postagens/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Titulo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QWRtaW5pc3RyYWRvckBlbWFpbC5jb206YWRtaW4xMjM=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/postagens/titulo/a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens",
+								"titulo",
+								"a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Postagem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QWRtaW5pc3RyYWRvckBlbWFpbC5jb206YWRtaW4xMjM=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\" : \"Postagem 02\",\r\n    \"texto\" : \"Texto de postagem 02\",\r\n    \"tema\" : {\r\n        \"id\" : 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postagens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Postagem",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QWRtaW5pc3RyYWRvckBlbWFpbC5jb206YWRtaW4xMjM=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"titulo\": \"Minha primeira postagem\",\r\n    \"texto\": \"Blog Pessoal funcionando!\",\r\n    \"tema\": {\r\n        \"id\" : 1\r\n    }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postagens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Postagem",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/postagens/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tema",
+			"item": [
+				{
+					"name": "Get By All Temas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QWRtaW5pc3RyYWRvckBlbWFpbC5jb206YWRtaW4xMjM=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/temas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QWRtaW5pc3RyYWRvckBlbWFpbC5jb206YWRtaW4xMjM=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/temas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Descrição",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QWRtaW5pc3RyYWRvckBlbWFpbC5jb206YWRtaW4xMjM=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/temas/descricao/spring",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas",
+								"descricao",
+								"spring"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Tema",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QWRtaW5pc3RyYWRvckBlbWFpbC5jb206YWRtaW4xMjM=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\" : \"Spring\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/temas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Tema",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QWRtaW5pc3RyYWRvckBlbWFpbC5jb206YWRtaW4xMjM=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1,\r\n    \"descricao\" : \"Deploy Heroku\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/temas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Tema",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/temas/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"temas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Get By All Usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {},
+						"followOriginalHttpMethod": false,
+						"removeRefererHeaderOnRedirect": false,
+						"followAuthorizationHeader": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QWRtaW5pc3RyYWRvckBlbWFpbC5jb206YWRtaW4xMjM=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Usuario por Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QWRtaW5pc3RyYWRvckBlbWFpbC5jb206YWRtaW4xMjM=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Usuario",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Lucas\",\r\n    \"usuario\" : \"Administrador@email.com\",\r\n    \"senha\" : \"admin123\",\r\n    \"foto\" : \"\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios/cadastrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\" : \"Administrador@email.com\",\r\n    \"senha\" : \"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios/logar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"logar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QWRtaW5pc3RyYWRvckBlbWFpbC5jb206YWRtaW4xMjM=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"LucasOi\",\r\n    \"usuario\": \"Administrador@email.com\",\r\n    \"senha\": \"$2a$10$MlnbZZ4EQbJ5QwigJHKhn.jmfWnuqdKOp3.kcsUzIVfbrsHNFZpcO\",\r\n    \"foto\": \"\",\r\n    \"postagem\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios/atualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
