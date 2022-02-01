@@ -21,14 +21,14 @@ import br.org.generation.minhalojadegames.model.Produto;
 import br.org.generation.minhalojadegames.repository.ProdutoRepository;
 
 @RestController
-@RequestMapping("/produto")
+@RequestMapping("/produtos")
 @CrossOrigin(origins="*", allowedHeaders = "*")
 public class ProdutoController {
 	
 	@Autowired
 	private ProdutoRepository produtoRepository;
-	
-	@GetMapping
+		
+	@GetMapping("/listar")
 	public ResponseEntity <List<Produto>> getAll(){
 		return ResponseEntity.ok(produtoRepository.findAll());
 	}
@@ -58,6 +58,26 @@ public class ProdutoController {
 				})
 				.orElse(ResponseEntity.notFound().build());
 	}
+	
+	/*
+	@PostMapping
+	public ResponseEntity<Produto> postProduto(@Valid @RequestBody Produto produto){
+		return categoriaRepository.findById(produto.getCategoria().getId())
+				.map(reposta -> ResponseEntity.status(HttpStatus.CREATED).body(produtoRepository.save(produto)))
+				.orElse(ResponseEntity.badRequest().build());
+	}
+	
+	
+	@PutMapping
+	public ResponseEntity<Produto> putProduto(@Valid @RequestBody Produto produto){
+			if(produtoRepository.existsById(produto.getId())) {
+				return categoriaRepository.findById(produto.getCategoria().getId())
+						.map(resposta-> ResponseEntity.status(HttpStatus.CREATED).body(produtoRepository.save(produto)))
+						.orElse(ResponseEntity.badRequest().build());
+			}
+			return ResponseEntity.notFound().build();
+	}
+	*/
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> deleteProduto(@PathVariable Long id){

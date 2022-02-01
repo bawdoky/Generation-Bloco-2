@@ -21,13 +21,13 @@ import br.org.generation.minhalojadegames.model.Categoria;
 import br.org.generation.minhalojadegames.repository.CategoriaRepository;
 
 @RestController
-@RequestMapping("/categoria")
+@RequestMapping("/categorias")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CategoriaController {
 	
 	@Autowired
 	private CategoriaRepository categoriaRepository;
-	
+		
 	@GetMapping
 	public ResponseEntity<List<Categoria>> getAll(){
 		return ResponseEntity.ok(categoriaRepository.findAll());
