@@ -18,46 +18,44 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Table(name = "tb_temas")
 public class Tema {
 	
-		@Id
-		@GeneratedValue(strategy = GenerationType.IDENTITY)  // auto increment do id
-		private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)  // auto increment do id
+	private Long id;
 		
-		/*
-		@NotBlank(message = "O atributo Descrito é obrigatorio e não pode conter")
-		private String descricao;
-		*/
+	/*
+	@NotBlank(message = "O atributo Descrito é obrigatorio e não pode conter")
+	private String descricao;
+	*/
 		
-		@NotNull(message = "O atributo Descrição é obrigatório")
-		private String descricao;
+	@NotNull(message = "O atributo Descrição é obrigatório")
+	private String descricao;
 		
-		@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
-		@JsonIgnoreProperties("tema")
-		private List<Postagem> postagem;
+	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
+	@JsonIgnoreProperties("tema")
+	private List<Postagem> postagem;
 
-		public Long getId() {
-			return id;
-		}
+	public Long getId() {
+		return id;
+	}
 
-		public void setId(Long id) {
-			this.id = id;
-		}
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-		public String getDescricao() {
-			return descricao;
-		}
+	public String getDescricao() {
+		return descricao;
+	}
 
-		public void setDescricao(String descricao) {
-			this.descricao = descricao;
-		}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
 
-		public List<Postagem> getPostagem() {
-			return postagem;
-		}
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
 
-		public void setPostagem(List<Postagem> postagem) {
-			this.postagem = postagem;
-		}
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
+	}
 
-		
-		
 }
