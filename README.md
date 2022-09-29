@@ -12,17 +12,17 @@
   
   <h2 id="sql">DB's MySQL</h2>
   1) Com o ** MySQL Workbench ** Desenvolvi as logicas e conhecimento da sintaxe para contruir bancos e tabelas assim com consutas e relacionamentos:
-  </a> - Repositório MySQL (<a href="https://github.com/LucasOii/Generation-Bloco-1/tree/main/Portugol">Click aqui!</a>);
+  </a> - Repositório MySQL (<a href="https://github.com/LucasOii/Generation-DBs-MySQL">Click aqui!</a>);
 
   <h2 id="crd">Cruds SpringBoot</h2>
   2) Com o ** SpringBoot ** Desenvolvi em back-end com java a criação de CRUD's simulando Farmacia, Loja de Games:
-  </a> - Repositório backend springboot (<a href="https://github.com/LucasOii/Generation-Bloco-1/tree/main/java">Click aqui!</a>);
+  </a> - Repositório backend springboot (<a href="https://github.com/LucasOii/Generation-Bloco-2/tree/main/SpringBoot-CRUDs">Click aqui!</a>);
   
   <h2 id="crd">Crud BlogPessoal</h2>
   3) Com o ** SpringBoot ** Desenvolvi em back-end com java a criação de CRUD's do meu BlogPessoal:
-  </a> - Repositório backend BlogPessoal (<a href="https://github.com/LucasOii/Generation-Bloco-1/tree/main/java">Click aqui!</a>);
+  </a> - Repositório backend BlogPessoal (<a href="https://github.com/LucasOii/Generation-Bloco-2/tree/main/SpringBoot-CRUDs/blogpessoal">Click aqui!</a>);
 
   <h2 id="crd">Crud AcquaQuality</h2>
   4) Com o ** SpringBoot ** Desenvolvi em back-end com java a criação de CRUD's da rede social AcquaQuality:
-  </a> - Repositório backend AcquaQuality (<a href="https://github.com/LucasOii/Generation-Bloco-1/tree/main/java">Click aqui!</a>);
+  </a> - Repositório backend AcquaQuality (<a href="https://github.com/AquaQuality/Back-end">Click aqui!</a>);
   
