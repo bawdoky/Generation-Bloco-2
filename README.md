@@ -18,11 +18,11 @@
   2) Com o ** SpringBoot ** Desenvolvi em back-end com java a criação de CRUD's simulando Farmacia, Loja de Games:
   </a> - Repositório backend springboot (<a href="https://github.com/LucasOii/Generation-Bloco-1/tree/main/java">Click aqui!</a>);
   
-  <h2 id="crd">Cruds BlogPessoal</h2>
+  <h2 id="crd">Crud BlogPessoal</h2>
   3) Com o ** SpringBoot ** Desenvolvi em back-end com java a criação de CRUD's do meu BlogPessoal:
   </a> - Repositório backend BlogPessoal (<a href="https://github.com/LucasOii/Generation-Bloco-1/tree/main/java">Click aqui!</a>);
 
-  <h2 id="crd">Cruds AcquaQuality</h2>
+  <h2 id="crd">Crud AcquaQuality</h2>
   4) Com o ** SpringBoot ** Desenvolvi em back-end com java a criação de CRUD's da rede social AcquaQuality:
   </a> - Repositório backend AcquaQuality (<a href="https://github.com/LucasOii/Generation-Bloco-1/tree/main/java">Click aqui!</a>);
   
