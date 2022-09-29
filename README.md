@@ -1,5 +1,3 @@
-# Gen_Spring
-
 # Projetos de estudos realizados durante o Bootcamp da GENERATION BRASIL
  Meus repositorios do Bloco 02
 
